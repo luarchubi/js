@@ -1,17 +1,3 @@
-// ------------
-// let nombre = prompt("como te llamas?");
-// let reservar = prompt("quieres reservar una clase?");
-// if (reservar == "no") {
-//   alert(nombre + " no has reservado");
-// } else {
-//   let fecha = prompt("que día quieres reservar?");
-//   function guardar(cliente, dia) {
-//     alert(nombre + " has reservado para el día " + fecha);
-//   }
-// }
-// guardar();
-// -------------
-
 let reservar = prompt("quieres reservar una clase?").toLowerCase();
 let nombre = "";
 let fecha = "";
