@@ -66,17 +66,9 @@ const clases = [
     precio: 500,
     tieneDescuento: false,
   },
-  // {
-  //   codigo: 8,
-  //   clase: "yoga",
-  //   horario: "21.00 - 21.45",
-  //   turno: "tarde",
-  //   profesor: "Marisol",
-  //   precio: 500,
-  //   tieneDescuento: true,
-  // },
+
   {
-    codigo: 9,
+    codigo: 8,
     clase: "pilates",
     horario: "21.00 - 21.45",
     turno: "noche",
