@@ -25,7 +25,7 @@ const clases = [
     turno: "mañana",
     profesor: "Chars",
     precio: 500,
-    tieneDescuento: true,
+    tieneDescuento: false,
   },
 
   {
@@ -35,12 +35,12 @@ const clases = [
     turno: "tarde",
     profesor: "Facundo",
     precio: 500,
-    tieneDescuento: true,
+    tieneDescuento: false,
   },
 
   {
     codigo: 5,
-    clase: "Yoga",
+    clase: "yoga",
     horario: "9:30 - 10.15",
     turno: "mañana",
     profesor: "Chars",
@@ -50,12 +50,12 @@ const clases = [
 
   {
     codigo: 6,
-    clase: "Yoga",
+    clase: "yoga",
     horario: "17.00 - 17.45",
     turno: "tarde",
     profesor: "Facundo",
     precio: 500,
-    tieneDescuento: true,
+    tieneDescuento: false,
   },
   {
     codigo: 7,
@@ -66,15 +66,15 @@ const clases = [
     precio: 500,
     tieneDescuento: false,
   },
-  {
-    codigo: 8,
-    clase: "Yoga",
-    horario: "21.00 - 21.45",
-    turno: "noche",
-    profesor: "Marisol",
-    precio: 500,
-    tieneDescuento: true,
-  },
+  // {
+  //   codigo: 8,
+  //   clase: "yoga",
+  //   horario: "21.00 - 21.45",
+  //   turno: "tarde",
+  //   profesor: "Marisol",
+  //   precio: 500,
+  //   tieneDescuento: true,
+  // },
   {
     codigo: 9,
     clase: "pilates",
@@ -82,6 +82,6 @@ const clases = [
     turno: "noche",
     profesor: "Marisol",
     precio: 500,
-    tieneDescuento: false,
+    tieneDescuento: true,
   },
 ];
