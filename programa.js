@@ -10,7 +10,7 @@ const clases = [
   },
   {
     codigo: 2,
-    clase: "body-pump",
+    clase: "gap",
     horario: "17.00 - 17.45",
     turno: "tarde",
     profesor: "Facundo",
@@ -30,7 +30,7 @@ const clases = [
 
   {
     codigo: 4,
-    clase: "pilates",
+    clase: "spinning",
     horario: "17.00 - 17.45",
     turno: "tarde",
     profesor: "Facundo",
@@ -50,7 +50,7 @@ const clases = [
 
   {
     codigo: 6,
-    clase: "yoga",
+    clase: "crossfit",
     horario: "17.00 - 17.45",
     turno: "tarde",
     profesor: "Facundo",
@@ -59,7 +59,7 @@ const clases = [
   },
   {
     codigo: 7,
-    clase: "body-pump",
+    clase: "stretching",
     horario: "21.00 - 21.45",
     turno: "noche",
     profesor: "Marisol",
@@ -69,7 +69,7 @@ const clases = [
 
   {
     codigo: 8,
-    clase: "pilates",
+    clase: "zumba",
     horario: "21.00 - 21.45",
     turno: "noche",
     profesor: "Marisol",
