@@ -57,7 +57,24 @@
       </nav>
     </header>
     <body>
-      <h1>CARRITO</h1>
+      
+        <form id= "formulario" action="">
+          <fieldset>
+            <legend>Reserva tu actividad</legend>
+              <label for="actividad">actividad:</label>
+              <br>
+              <input name="actividad" type="text">
+              <br>
+               <label for="turno">turno:</label>
+              <br>
+              <input name="turno" type="text">
+           <br>
+           <input id= "send"  type="submit" value="Enviar">
+           <input id ="reset" type="reset" value="Limpiar formulario">
+          </fieldset>
+
+          <div id="lista-reservas"> reservas:</div>
+        </form>
     <script src="programa.js"></script>
     <script src="entrega3.js"></script>
   </body>

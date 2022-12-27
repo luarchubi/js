@@ -31,23 +31,53 @@
 //   }
 // }
 
-// const bookings = document.getElementById("cart");
-// bookings.addEventListener("click", listarReservas);
-// function listarReservas() {
-//   const asd1 = document.getElementById("booking-list");
-//   const asd2 = document.createElement("p");
-//   asd2.innerText = "hola";
-//   asd1.appendChild(asd2);
-// }
+// pestaña clases
+// const showClases = () => {
+//   const contenedor = document.getElementById("programacion");
+//   clases.forEach((elemento) => {
+//     let div = document.createElement("div");
+//     div.innerText = `
+//               ${elemento.clase} - ${elemento.horario}
+//        `;
+//     contenedor.appendChild(div);
+//   });
+// };
+// showClases();
 
-const showClases = () => {
-  const contenedor = document.getElementById("programacion");
-  clases.forEach((elemento) => {
-    let div = document.createElement("div");
-    div.innerText = `
-              ${elemento.clase} - ${elemento.horario}
-       `;
-    contenedor.appendChild(div);
-  });
+let booking = [];
+const formulario = document.getElementById("formulario");
+const listaReservas = document.getElementById("lista-reservas");
+
+const crearReserva = (actividad1, turno1) => {
+  return {
+    clase: actividad1,
+    turno: turno1,
+  };
 };
-showClases();
+
+const mostrarReserva = (activity) => {
+  const div = document.createElement("div");
+  booking.push(activity);
+  div.innerHTML += `
+${activity.clase}
+${activity.turno}
+`;
+  listaReservas.appendChild(div);
+};
+
+formulario.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const form = new FormData(formulario);
+  const actividad1 = form.get("actividad");
+  const turno1 = form.get("turno");
+  const nuevaReserva = crearReserva(actividad1, turno1);
+  mostrarReserva(nuevaReserva);
+});
+
+const erase = document.getElementById("reset");
+erase.addEventListener("click", limpiar);
+function limpiar() {
+  document.getElementById("listaReservas");
+  listaReservas.remove();
+}
