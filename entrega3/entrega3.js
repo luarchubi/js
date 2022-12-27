@@ -1,3 +1,4 @@
+// let parrafo = "";
 // let boton = document.getElementById("reservar");
 // boton.addEventListener("click", bookClass);
 
@@ -30,15 +31,23 @@
 //   }
 // }
 
+// const bookings = document.getElementById("cart");
+// bookings.addEventListener("click", listarReservas);
+// function listarReservas() {
+//   const asd1 = document.getElementById("booking-list");
+//   const asd2 = document.createElement("p");
+//   asd2.innerText = "hola";
+//   asd1.appendChild(asd2);
+// }
+
 const showClases = () => {
-  const contenedr = document.getElementById("programacion");
+  const contenedor = document.getElementById("programacion");
   clases.forEach((elemento) => {
     let div = document.createElement("div");
-    div.innerHTML = `
-    <li>
-           ${elemento.clase} - ${elemento.horario}
-    </li>`;
-    contenedr.appendChild(div);
+    div.innerText = `
+              ${elemento.clase} - ${elemento.horario}
+       `;
+    contenedor.appendChild(div);
   });
 };
 showClases();

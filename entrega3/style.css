@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: black;
 }
 img {
   height: auto;
@@ -22,6 +22,9 @@ h1 {
   flex-direction: row;
 }
 
+li {
+  color: blue;
+}
 .nuevo-li {
   color: green;
 }
@@ -37,4 +40,8 @@ button {
 a {
   display: flex;
   text-align: center;
+}
+
+#programacion {
+  color: white;
 }
