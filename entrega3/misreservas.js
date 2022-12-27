@@ -19,21 +19,20 @@ const mostrarReserva = (activity) => {
 `;
   listaReservas.appendChild(div);
   formulario.reset();
-  // guardarReserva(bookings);
+  guardarReservas(bookings);
 };
 
 //ELIMINAR RESERVA
 
 const eliminar = (clase) => {
   bookings.forEach((booking, index) => {
-    if (booking.title === clase) {
+    if (booking.clase === clase) {
       bookings.splice(index, 1);
     }
   });
   displayReserva(bookings);
-  console.log(clase, bookings);
 
-  // guardarReserva(bookings);
+  guardarReservas(bookings);
 };
 
 const displayReserva = (bookings) => {
@@ -42,15 +41,14 @@ const displayReserva = (bookings) => {
     const div = document.createElement("div");
     div.innerHTML += `
 <h6> clase: <h6>  ${activity.clase}  turno: ${activity.turno}
-<button name= "delete" id ="${activity.clase}"" value= "${activity.clase}" > borrar </button>
+<button type= "button" name= "delete" id ="${activity.clase}"" value= "${activity.clase}" > borrar </button>
 `;
     listaReservas.appendChild(div);
   });
 };
 
 //LISTENERS
-formulario.addEventListener("click", (e) => eliminar(e.target.value));
-
+listaReservas.addEventListener("click", (e) => eliminar(e.target.value));
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -62,11 +60,18 @@ formulario.addEventListener("submit", (e) => {
 });
 
 //STORAGES
-// const guardarReservas = (reservas) => {
-//   localStorage.setItem("reservas", JSON.stringify(reservas));
-// };
+const guardarReservas = (reservas) => {
+  localStorage.setItem("reservas", JSON.stringify(reservas));
+};
 
-// const getReservas = () => {
-//   const reservasGuardadas = JSON.parse(localStorage.getItem("reservas"));
-//   return reservasGuardadas;
-// };
+const getReservas = () => {
+  const reservasGuardadas = JSON.parse(localStorage.getItem("reservas"));
+  return reservasGuardadas;
+};
+
+const getStorageReservas = () => {
+  if (localStorage.getItem("reservas")) bookings = getReservas();
+  displayReserva(bookings);
+};
+
+getStorageReservas();
