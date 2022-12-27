@@ -1,4 +1,4 @@
-let booking = [];
+let bookings = [];
 const formulario = document.getElementById("formulario");
 const listaReservas = document.getElementById("lista-reservas");
 
@@ -11,13 +11,45 @@ const crearReserva = (actividad1, turno1) => {
 
 const mostrarReserva = (activity) => {
   const div = document.createElement("div");
-  booking.push(activity);
+  bookings.push(activity);
   div.innerHTML += `
-${activity.clase}
-${activity.turno}
+<h6> clase: <h6>  ${activity.clase}
+<h6> turno: <h6>${activity.turno}
+<button name= "delete" id ="${activity.clase}" value= "${activity.clase}" >  borrar </button>
 `;
   listaReservas.appendChild(div);
+  formulario.reset();
+  // guardarReserva(bookings);
 };
+
+//ELIMINAR RESERVA
+
+const eliminar = (clase) => {
+  bookings.forEach((booking, index) => {
+    if (booking.title === clase) {
+      bookings.splice(index, 1);
+    }
+  });
+  displayReserva(bookings);
+  console.log(clase, bookings);
+
+  // guardarReserva(bookings);
+};
+
+const displayReserva = (bookings) => {
+  listaReservas.innerHTML = "";
+  bookings.forEach((activity) => {
+    const div = document.createElement("div");
+    div.innerHTML += `
+<h6> clase: <h6>  ${activity.clase}  turno: ${activity.turno}
+<button name= "delete" id ="${activity.clase}"" value= "${activity.clase}" > borrar </button>
+`;
+    listaReservas.appendChild(div);
+  });
+};
+
+//LISTENERS
+formulario.addEventListener("click", (e) => eliminar(e.target.value));
 
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -29,9 +61,12 @@ formulario.addEventListener("submit", (e) => {
   mostrarReserva(nuevaReserva);
 });
 
-const erase = document.getElementById("reset");
-erase.addEventListener("click", limpiar);
-function limpiar() {
-  document.getElementById("listaReservas");
-  listaReservas.remove();
-}
+//STORAGES
+// const guardarReservas = (reservas) => {
+//   localStorage.setItem("reservas", JSON.stringify(reservas));
+// };
+
+// const getReservas = () => {
+//   const reservasGuardadas = JSON.parse(localStorage.getItem("reservas"));
+//   return reservasGuardadas;
+// };

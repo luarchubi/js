@@ -35,6 +35,7 @@ button {
   display: flex;
   margin: 50px;
   border-radius: 20px;
+  text-align: center;
 }
 
 a {
@@ -49,5 +50,5 @@ a {
 form {
   background-color: white;
   width: 500px;
-  
+  margin: auto;
 }
