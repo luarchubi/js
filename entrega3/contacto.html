@@ -11,7 +11,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="public/css/style.css" />
   </head>
   <body>
@@ -54,39 +54,47 @@
         </div>
       </nav>
     </header>
-    <form id="formulario" action="">
-      <fieldset>
-        <legend>Indica que clase quieres hacer</legend>
-        <label for="actividad">actividad:</label>
-        <br />
-        <select name="actividad" id="actividad">
-          <option value="Yoga">Yoga</option>
-          <option value="Pilates">Pilates</option>
-          <option value="GAP">GAP</option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-        </select>
-        <br />
-        <br />
-        <label for="turno">Turno:</label>
-        <br />
-        <select name="turno" id="">
-          <option value="mañana">9:30 - 10.15</option>
-          <option value="tarde">17.00 - 17.45</option>
-          <option value="noche">21.00 - 21.45</option>
-        </select>
-        <br />
-        <br />
-        <br />
-        <input id="send" type="submit" value="Enviar" />
-      </fieldset>
-    </form>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="programa.js"></script>
-    <script src="contacto.js"></script>
+    <div id ="prueba"></div>
+    <!-- <form id="formulario" action="">
+  <section>
+      <form id="formulario">
+        <fieldset>
+          <legend>¡Consultános!</legend>
+          <label name="nombre-apellido">Nombre:</label>
+          <br />
+          <input class="campos" type="text" />
+          <br />
+          <br />
+          <label name="telefóno">Teléfono:</label>
+          <br />
+          <input type="text" />
+          <br />
+          <br />
+          <label name="mail">Mail:</label>
+          <br />
+          <input class="campos" type="mail" />
+          <br />
+
+          <div>
+            <legend>Actividad:</legend>
+            <select name="Actividad">
+              <option>Clases</option>
+              <option>Otras consultas</option>
+            </select>
+            <br />
+          </div>
+          <br />
+          <div><label for="consulta">Consulta:</label></div>
+          <textarea name="consulta" id="textarea" cols="50" rows="10"></textarea>
+          <div>¿Querés que te contactemos por teléfono?</div>
+          <input type="checkbox" name="acepta" value="1" />Si
+          <div>
+            <input  type="submit" value="Enviar" />
+            <input  type="reset" value="Limpiar formulario" />
+          </div>
+        </fieldset>
+      </form> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="src/components/App/contacto.js"></script>
   </body>
 </html>

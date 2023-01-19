@@ -29,6 +29,7 @@ const eliminar = (clase) => {
     if (booking.clase === clase) {
       bookings.splice(index, 1);
     }
+    Swal.fire("La reserva se ha eliminado");
   });
   displayReserva(bookings);
 
@@ -39,7 +40,6 @@ const displayReserva = (bookings) => {
   listaReservas.innerHTML = "";
   bookings.forEach((activity) => {
     const div = document.createElement("div");
-    
     div.innerHTML += `
           <div>
           <h6> Clase: ${activity.clase}</h6>

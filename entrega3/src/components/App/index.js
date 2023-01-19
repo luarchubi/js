@@ -1,4 +1,4 @@
-//muestras listado de clases al clickear boton "ver clases disponibles"
+//muestra listado de clases al clickear boton "ver clases disponibles"
 const showClases = async () => {
   const contenedor = document.getElementById("programacion");
   const clases = await activityController();

@@ -23,6 +23,9 @@ h1 {
   font-size: 10 rem;
 }
 
+h6 {
+  color: white;
+}
 footer {
   color: white;
 }
@@ -53,7 +56,6 @@ button {
   width: auto;
   border-radius: 20px;
   text-align: center;
-  background-color: red;
   color: white;
   border-style: none;
   display: inline;
@@ -74,7 +76,7 @@ a {
 }
 
 #lista-reservas {
-  background-color: green;
+  background-color: black;
 }
 
 form {
