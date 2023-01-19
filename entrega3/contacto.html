@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -37,7 +37,8 @@
                   >Home</a
                 >
               </li>
-
+             
+              </li>
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="misReservas.html"
                   >Mis reservas</a
@@ -53,30 +54,39 @@
         </div>
       </nav>
     </header>
-    <div id="imagen-fondo">
-      <img src="public/imagenes/fondo.jpg" alt="imagen-de-fondo" />
-    </div>
-
-    <div class="botonera">
-      <button>
-        <a id="reservar" aria-current="page" href="misReservas.html">
-          Reserva tu primera clase gratis aquí
-        </a>
-      </button>
-      <button>
-        <a href="#listadoclases" id="listadoClases"> Ver clases disponibles </a>
-      </button>
-    </div>
-
-    <!-- <ul id="listado-reservas"></ul> -->
-    <a name="listadoclases"></a>
-    <div id="programacion"></div>
-
-    <!-- <section id="booking-list"></section> -->
-    
-    <script src="src/components/data/programa.json"></script>
-    <script src="src/components/App/index.js"></script>
-    <script src="src/components/controllers/activitiesController.js"></script>
+    <form id="formulario" action="">
+      <fieldset>
+        <legend>Indica que clase quieres hacer</legend>
+        <label for="actividad">actividad:</label>
+        <br />
+        <select name="actividad" id="actividad">
+          <option value="Yoga">Yoga</option>
+          <option value="Pilates">Pilates</option>
+          <option value="GAP">GAP</option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+        <br />
+        <br />
+        <label for="turno">Turno:</label>
+        <br />
+        <select name="turno" id="">
+          <option value="mañana">9:30 - 10.15</option>
+          <option value="tarde">17.00 - 17.45</option>
+          <option value="noche">21.00 - 21.45</option>
+        </select>
+        <br />
+        <br />
+        <br />
+        <input id="send" type="submit" value="Enviar" />
+      </fieldset>
+    </form>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="programa.js"></script>
+    <script src="contacto.js"></script>
   </body>
 </html>

@@ -1,0 +1,99 @@
+* {
+  margin: 0x;
+  padding: 0px;
+}
+
+body {
+  background-color: black;
+}
+
+#imagen-fondo {
+  display: flex;
+  justify-content: flex-end;
+}
+img {
+  height: auto;
+  width: auto;
+}
+
+h1 {
+  color: #98dd68;
+  text-align: center;
+  font-style: oblique;
+  font-size: 10 rem;
+}
+
+footer {
+  color: white;
+}
+#barra-navegacion {
+  justify-content: space-around;
+}
+.botonera {
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  color: #98dd68;
+}
+
+button {
+  height: auto;
+  width: auto;
+  margin: 50px;
+  padding: 0.5rem;
+  border-radius: 20px;
+  text-align: center;
+  background-color: #98dd68;
+}
+
+.boton2 {
+  height: auto;
+  width: auto;
+  border-radius: 20px;
+  text-align: center;
+  background-color: red;
+  color: white;
+  border-style: none;
+  display: inline;
+}
+a {
+  display: flex;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+
+.nav-link {
+  background-color: black;
+  color: #98dd68;
+}
+#programacion {
+  color: white;
+}
+
+#lista-reservas {
+  background-color: green;
+}
+
+form {
+  background-color: white;
+  width: 500px;
+  margin: auto;
+}
+
+.ocultar {
+  justify-content: center;
+}
+
+#formulario {
+  background-color: #98dd68;
+  margin: auto;
+  margin-top: 15px;
+  text-align: center;
+  padding: 30px;
+  border-style: groove;
+  border-radius: 15px;
+  max-width: 100%;
+}

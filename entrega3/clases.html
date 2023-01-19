@@ -11,7 +11,8 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="public/css/style.css" />
   </head>
   <body>
     <header class="header">
@@ -36,13 +37,9 @@
                   >Home</a
                 >
               </li>
+
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="clases.html"
-                  >Clases</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="carrito.html"
+                <a class="nav-link" aria-current="page" href="misReservas.html"
                   >Mis reservas</a
                 >
               </li>
@@ -57,7 +54,8 @@
       </nav>
     </header>
     <div id="programacion"></div>
-    <script src="programa.js"></script>
-    <script src="clases.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="src/components/data/programa.js"></script>
+    <script src="src/components/App/clases.js"></script>
   </body>
 </html>

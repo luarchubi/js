@@ -13,9 +13,9 @@ const mostrarReserva = (activity) => {
   const div = document.createElement("div");
   bookings.push(activity);
   div.innerHTML += `
-<h6> clase: <h6>  ${activity.clase}
-<h6> turno: <h6>${activity.turno}
-<button name= "delete" id ="${activity.clase}" value= "${activity.clase}" >  borrar </button>
+<h6> Has reservado:  ${activity.clase}</h6>
+<h6> Turno: ${activity.turno}</h6>
+<button class = "boton2" name= "delete" id ="${activity.clase}" value= "${activity.clase}" >  borrar </button>
 `;
   listaReservas.appendChild(div);
   formulario.reset();
@@ -39,10 +39,14 @@ const displayReserva = (bookings) => {
   listaReservas.innerHTML = "";
   bookings.forEach((activity) => {
     const div = document.createElement("div");
+    
     div.innerHTML += `
-<h6> clase: <h6>  ${activity.clase}  turno: ${activity.turno}
-<button type= "button" name= "delete" id ="${activity.clase}"" value= "${activity.clase}" > borrar </button>
-`;
+          <div>
+          <h6> Clase: ${activity.clase}</h6>
+          <h6> Turno: ${activity.turno}</h6>
+          <button class ="boton2" type= "button" name= "delete" id ="${activity.clase}"" value= "${activity.clase}" > borrar </button>
+          </div>
+          `;
     listaReservas.appendChild(div);
   });
 };
@@ -57,6 +61,14 @@ formulario.addEventListener("submit", (e) => {
   const turno1 = form.get("turno");
   const nuevaReserva = crearReserva(actividad1, turno1);
   mostrarReserva(nuevaReserva);
+});
+
+const btnSend = document.getElementById("send");
+btnSend.addEventListener("click", () => {
+  Swal.fire({
+    icon: "success",
+    text: "La reserva fue realizada correctamente!",
+  });
 });
 
 //STORAGES
